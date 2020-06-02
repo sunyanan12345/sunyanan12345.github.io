@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>mininet 创建topo的两种方式</title>
+    <link href="/2020/05/21/syn20200521-sdwan-005/"/>
+    <url>/2020/05/21/syn20200521-sdwan-005/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、miniedit-py操作界面"><a href="#一、miniedit-py操作界面" class="headerlink" title="一、miniedit.py操作界面"></a>一、miniedit.py操作界面</h3><blockquote><p>Mininet 2.2.0内置了一个mininet可视化工具miniedit。miniedit在/mininet/examples目录下提供miniedit.py脚本，执行脚本后将显示Mininet的可视化界面，在界面上可进行自定义拓扑和自定义设置。</p></blockquote><ul><li>执行miniedit.py脚本，显示操作界面(root 权限执行)<br><img src="/2020/05/21/syn20200521-sdwan-005/001.jpg" srcset="/img/loading.gif" alt><br><img src="/2020/05/21/syn20200521-sdwan-005/002.jpg" srcset="/img/loading.gif" alt></li><li>点击左侧的图标即为选中节点，在面板内点击即可添加。<br><img src="/2020/05/21/syn20200521-sdwan-005/003.jpg" srcset="/img/loading.gif" alt></li><li>点击鼠标右键，选择Properties即可设置其属性（其它不做赘述，基于默认）<br><img src="/2020/05/21/syn20200521-sdwan-005/004.jpg" srcset="/img/loading.gif" alt></li><li>点击run,即可以选择的拓扑运行mininet<br><img src="/2020/05/21/syn20200521-sdwan-005/005.jpg" srcset="/img/loading.gif" alt></li><li>使用图形界面设置好拓扑后，可以通过选择File-Export Level 2 Script，将其保存为python脚本，以后直接运行python脚本即可重现拓扑，重现拓扑后可在命令行直接操作<br><img src="/2020/05/21/syn20200521-sdwan-005/006.jpg" srcset="/img/loading.gif" alt><h3 id="二、python-脚本"><a href="#二、python-脚本" class="headerlink" title="二、python 脚本"></a>二、python 脚本</h3></li><li>使用简单的Python API轻松定义自定义拓扑，custom/topo-2sw-2host.py中提供了一个示例。此示例直接连接两个交换机，每个交换机都接入一台主机<br><img src="/2020/05/21/syn20200521-sdwan-005/007.jpg" srcset="/img/loading.gif" alt></li><li>提供自定义的mininet文件后，它可以向命令行添加新的拓扑，交换机类型和测试。例如：<br><img src="/2020/05/21/syn20200521-sdwan-005/008.jpg" srcset="/img/loading.gif" alt></li></ul><p><a href="https://feisky.gitbooks.io/sdn/content/basic/tcpip.html" target="_blank" rel="noopener">lianjie</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>mininet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Open vSwitch</title>
+    <link href="/2020/05/21/syn20200521-sdwan-004/"/>
+    <url>/2020/05/21/syn20200521-sdwan-004/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、Open-vSwitch"><a href="#一、Open-vSwitch" class="headerlink" title="一、Open vSwitch"></a>一、Open vSwitch</h3><p>OpenvSwitch简称OVS，正如其<a href="http://openvswitch.org/" target="_blank" rel="noopener">官网</a>所述，OVS是一个高质量、多层的虚拟交换软件。它的目的是通过编程扩展支持大规模网络自动化，同时还支持标准的管理接口和协议。</p><p>随着虚拟化应用普及，需要部署更多的虚拟化交换机，而费用昂贵的闭源虚拟交换机让用户不堪重负，多层虚拟化软件交换机Open vSwitch由Nicira Networks开发，主要实现代码为可移植的C代码。它遵循Apache 2.0开源代码版权协议，可用于生产环境，支持跨物理服务器分布式管理、扩展编程、大规模网络自动化和标准化接口，实现了和大多数商业闭源交换机功能类似的软件交换机。</p><p>OVS官方的定位是要做一个产品级质量的多层虚拟交换机，通过支持可编程扩展来实现大规模的网络自动化。设计目标是方便管理和配置虚拟机网络，检测多物理主机在动态虚拟环境中的流量情况。针对这一目标，OVS具备很强的灵活性。可以在管理程序中作为软件switch运行，也可以直接部署到硬件设备上作为控制层。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>mininet基本使用</title>
+    <link href="/2020/05/21/syn20200521-sdwan-003/"/>
+    <url>/2020/05/21/syn20200521-sdwan-003/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/mininet/mininet/blob/master/README.md" target="_blank" rel="noopener">一、二、三来自mininet README.md</a></p><h3 id="一、What-is-Mininet"><a href="#一、What-is-Mininet" class="headerlink" title="一、What is Mininet?"></a>一、What is Mininet?</h3><blockquote><p>Mininet在一台机器上模拟由hosts, links, and switches组成的完整网络。要创建一个简单的双主机、单交换机网络，只需运行:<br><code>sudo mn</code> </p></blockquote><blockquote><p>Mininet对于交互式开发、测试和演示非常有用，特别是那些使用OpenFlow和SDN的开发人员。在Mininet中原型化的基于openflow的网络控制器通常可以转移到硬件上，只需要做很少的更改就可以实现全行速率执行</p></blockquote><h3 id="二、How-does-it-work"><a href="#二、How-does-it-work" class="headerlink" title="二、How does it work?"></a>二、How does it work?</h3><blockquote><p>Mininet使用基于进程的虚拟化和网络命名空间创建虚拟网络——这些特性在最近的Linux内核中是可用的。在Mininet中，主机被模拟为在网络命名空间中运行的bash进程，因此任何正常运行在Linux服务器(如web服务器或客户端程序)上的代码都应该在Mininet“主机”中正常运行。Mininet“主机”将有自己的私有网络接口，只能看到自己的进程。Mininet中的Switches是基于软件的Switches，如Open vSwitch或OpenFlow。links是虚拟以太网对，它们位于Linux内核中，将模拟的交换机连接到模拟的主机(进程)。</p></blockquote><h3 id="三、Features"><a href="#三、Features" class="headerlink" title="三、Features"></a>三、Features</h3><p>Mininet包括:</p><ul><li>一个命令行启动程序(<code>mn</code>)，用于实例化网络。</li><li>一个方便的Python API，用于创建不同大小和拓扑的网络。</li><li>示例(在<code>Examples\</code>目录中)帮助您入门。</li><li>通过Python <code>help()</code>文档字符串提供完整的API文档，以及使用<code>make doc</code>生成PDF/HTML文档的能力。</li><li>使用Mininet对象的参数化拓扑(<code>Topo</code>子类)。例如，可以使用以下命令创建树状网络:<br><code>mn --topo tree,depth=2,fanout=3</code></li><li>命令行接口(CLI类)，它提供有用的诊断命令(如iperf和ping)，以及向节点运行命令的能力。例如,<br><code>mininet&gt; h11 ifconfig -a</code><br>告诉主机h11运行命令ifconfig -a</li><li>一个<code>cleanup</code>命令，用来清除Mininet或Linux可能留下的垃圾(接口、进程、/tmp中的文件等)。如果事情停止工作，试试这个!<br><code>mn - c</code></li></ul><p><a href="http://mininet.org/walkthrough/" target="_blank" rel="noopener">以下内容来自mininet网站的基本示例</a></p><ul><li><p>第1部分：日常Mininet使用</p><ul><li>基本命令<pre><code class="hljs bash"><span class="hljs-comment">#显示启动选项</span>sudo mn -h</code></pre></li></ul></li><li><p>第2部分：高级启动选项</p></li><li><p>第3部分：Mininet命令行界面（CLI）命令</p></li><li><p>第4部分：Python API示例</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>mininet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>控制器-ryu</title>
+    <link href="/2020/05/21/syn20200521-sdwan-002/"/>
+    <url>/2020/05/21/syn20200521-sdwan-002/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、ryu-ryu目录说明"><a href="#一、ryu-ryu目录说明" class="headerlink" title="一、ryu/ryu目录说明"></a>一、ryu/ryu目录说明</h3><table><thead><tr><th>目录</th><th>说明</th></tr></thead><tbody><tr><td>app</td><td>内置的应用</td></tr><tr><td>base</td><td>app_manager.py，其作用是RYU应用的管理中心。用于加载RYU应用程序，接受从APP发送过来的信息，同时也完成消息的路由。</td></tr><tr><td>cmd</td><td>定义了RYU的命令系统</td></tr><tr><td>contrib</td><td>主要存放的是开源社区贡献者的代码</td></tr><tr><td>controller</td><td>controller相关的文件，如events.py, ofp_handler.py, controller.py等。其中controller.py中定义了OpenFlowController基类。用于定义OpenFlow的控制器，用于处理交换机和控制器的连接等事件，同时还可以产生事件和路由事件。</td></tr><tr><td>lib</td><td>lib中定义了我们需要使用到的基本的数据结构，如dpid, mac和ip等数据结构</td></tr><tr><td>ofproto</td><td>两类文件，一类是协议的数据结构定义，另一类是协议解析，也即数据包处理函数文件。</td></tr><tr><td>services</td><td>完成了BGP和vrrp的实现</td></tr><tr><td>tests</td><td>单元测试以及整合测试的代码</td></tr><tr><td>topology</td><td>包含了switches.py等文件，基本定义了一套交换机的数据结构</td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>ryu</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ryu、mininet的基本测试</title>
+    <link href="/2020/05/20/syn20200520-sdwan-001/"/>
+    <url>/2020/05/20/syn20200520-sdwan-001/</url>
+    
+    <content type="html"><![CDATA[<ul><li>1.未启动控制层，mininet查看流表，h1 ping h2不通<br><img src="/2020/05/20/syn20200520-sdwan-001/p01.png" srcset="/img/loading.gif" alt></li><li>2.启动ryu 的应用示例，再用h1 ping h2 ,并显示流表。Ryu的应用下有连接数据，h1 ping 通h2,且流表中有内容。<br><img src="/2020/05/20/syn20200520-sdwan-001/p02.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p03.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p04.png" srcset="/img/loading.gif" alt></li><li>3.在2的基础上用h1 ping h2，控制器的应用下没有通信数据，删除流表，再用h1 ping h2,会显示两条流表信息。<br><img src="/2020/05/20/syn20200520-sdwan-001/p05.png" srcset="/img/loading.gif" alt></li><li>4.启动获取拓扑的api,并从浏览器获取交换机（目前mininet只有一个交换机）及其流表<br><img src="/2020/05/20/syn20200520-sdwan-001/p06.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p07.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p08.png" srcset="/img/loading.gif" alt></li><li>5.关闭mininet ,rest查询交换机无数据<br><img src="/2020/05/20/syn20200520-sdwan-001/p09.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p10.png" srcset="/img/loading.gif" alt></li><li>6.重启mininet,rest查询交换机可获取数据<br><img src="/2020/05/20/syn20200520-sdwan-001/p11.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p12.png" srcset="/img/loading.gif" alt></li><li>7.以上测试基于默认的基本配置，南向端口修改为6666测试<br><img src="/2020/05/20/syn20200520-sdwan-001/p13.png" srcset="/img/loading.gif" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p14.png" srcset="/img/loading.gif" alt><br>Mininet 的控制器指定参数：–controller remote,ip=ipaddr,port=port<br><img src="/2020/05/20/syn20200520-sdwan-001/p15.png" srcset="/img/loading.gif" alt>  </li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>sdn</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>sdn</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>python的安装配置</title>
+    <link href="/2020/05/16/syn20200516-python-001/"/>
+    <url>/2020/05/16/syn20200516-python-001/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、Windows安装python3-8"><a href="#一、Windows安装python3-8" class="headerlink" title="一、Windows安装python3.8"></a>一、Windows安装python3.8</h3><ul><li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python官网</a>下载安装程序,点点点（勾选Add Python to path）。</li><li>查看到版本，安装成功<pre><code class="hljs taggerscript">C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\s</span>unyanan&gt;python -VPython 3.8.3C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\s</span>unyanan&gt;</code></pre></li></ul><h3 id="二、虚拟环境配置"><a href="#二、虚拟环境配置" class="headerlink" title="二、虚拟环境配置"></a>二、虚拟环境配置</h3><ul><li><p>依次安装virtualenv、virtualenvwrapper-win（linux 下是virtualenvwrapper）</p><pre><code class="hljs bash">pip3 install virtualenv==16.7.9pip3 install virtualenvwrapper-win</code></pre><blockquote><p>virtualenv20.0版本之后就重构了，可能有些问题<br>最近的版本号是16.7.9</p></blockquote></li><li><p>配置virtualenvwrapper环境变量</p><blockquote><p>默认创建的虚拟环境在系统用户根目录Envs下，自定义需配置环境变量</p></blockquote><pre><code class="hljs bash"><span class="hljs-comment">#变量名</span>WORKON_HOME<span class="hljs-comment">#变量值：自定义配置自定义路径</span>c://users/sunyanan/Envs；</code></pre></li><li><p>virtualenvwrapper基本操作</p><pre><code class="hljs bash"><span class="hljs-comment">#创建虚拟环境</span>mkvirtualenv [虚拟环境名称]<span class="hljs-comment">#查看虚拟环境</span>workon <span class="hljs-comment">#进入虚拟环境</span>workon [虚拟环境名称]<span class="hljs-comment">#退出虚拟环境</span>deactivate<span class="hljs-comment">#删除虚拟环境</span>rmvirtualenv [虚拟环境名称]</code></pre></li></ul><ul><li>vscode 配置 python<ul><li>搜索安装python插件</li><li>命令行输入：<code>python:select interpreter</code> 选择环境</li></ul></li></ul><hr><p>完。</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>python</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

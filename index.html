@@ -1,10 +1,564 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>sunny | 面朝大海，春暖花开</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">sunny</h1><a id="logo" href="/.">sunny</a><p class="description">面朝大海，春暖花开</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/atom.xml"><i class="fa fa-rss"> RSS</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2020/05/21/syn20200521-sdwan-005/">mininet 创建topo的两种方式</a></h1><div class="post-meta">2020-05-21</div><div class="post-content"><h3 id="一、miniedit-py操作界面"><a href="#一、miniedit-py操作界面" class="headerlink" title="一、miniedit.py操作界面"></a>一、miniedit.py操作界面</h3><blockquote>
-<p>Mininet 2.2.0内置了一个mininet可视化工具miniedit。miniedit在/mininet/examples目录下提供miniedit.py脚本，执行脚本后将显示Mininet的可视化界面，在界面上可进行自定义拓扑和自定义设置。</p></div><p class="readmore"><a href="/2020/05/21/syn20200521-sdwan-005/">Read More</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/05/21/syn20200521-sdwan-004/">Open vSwitch</a></h1><div class="post-meta">2020-05-21</div><div class="post-content"><h3 id="一、Open-vSwitch"><a href="#一、Open-vSwitch" class="headerlink" title="一、Open vSwitch"></a>一、Open vSwitch</h3><p>OpenvSwitch简称OVS，正如其<a href="http://openvswitch.org/" target="_blank" rel="noopener">官网</a>所述，OVS是一个高质量、多层的虚拟交换软件。它的目的是通过编程扩展支持大规模网络自动化，同时还支持标准的管理接口和协议。</p></div><p class="readmore"><a href="/2020/05/21/syn20200521-sdwan-004/">Read More</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/05/21/syn20200521-sdwan-003/">mininet基本使用</a></h1><div class="post-meta">2020-05-21</div><div class="post-content"><p><a href="https://github.com/mininet/mininet/blob/master/README.md" target="_blank" rel="noopener">一、二、三来自mininet README.md</a></p>
-<h3 id="一、What-is-Mininet"><a href="#一、What-is-Mininet" class="headerlink" title="一、What is Mininet?"></a>一、What is Mininet?</h3><blockquote></div><p class="readmore"><a href="/2020/05/21/syn20200521-sdwan-003/">Read More</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/05/21/syn20200521-sdwan-002/">控制器-ryu</a></h1><div class="post-meta">2020-05-21</div><div class="post-content"><h3 id="一、ryu-ryu目录说明"><a href="#一、ryu-ryu目录说明" class="headerlink" title="一、ryu/ryu目录说明"></a>一、ryu/ryu目录说明</h3><table>
-<thead>
-<tr>
-<th>目录</th>
-<th>说明</th></div><p class="readmore"><a href="/2020/05/21/syn20200521-sdwan-002/">Read More</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/05/20/syn20200520-sdwan-001/">ryu、mininet的基本测试</a></h1><div class="post-meta">2020-05-20</div><div class="post-content"><ul>
-<li>1.未启动控制层，mininet查看流表，h1 ping h2不通<br><img src="/2020/05/20/syn20200520-sdwan-001/p01.png" alt></li>
-<li>2.启动ryu 的应用示例，再用h1 ping h2 ,并显示流表。Ryu的应用下有连接数据，h1 ping 通h2,且流表中有内容。<br><img src="/2020/05/20/syn20200520-sdwan-001/p02.png" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p03.png" alt><br><img src="/2020/05/20/syn20200520-sdwan-001/p04.png" alt></li></div><p class="readmore"><a href="/2020/05/20/syn20200520-sdwan-001/">Read More</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/05/16/syn20200516-python-001/">python的安装配置</a></h1><div class="post-meta">2020-05-16</div><div class="post-content"><h3 id="一、Windows安装python3-8"><a href="#一、Windows安装python3-8" class="headerlink" title="一、Windows安装python3.8"></a>一、Windows安装python3.8</h3><ul>
-<li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">python官网</a>下载安装程序,点点点（勾选Add Python to path）。</li></div><p class="readmore"><a href="/2020/05/16/syn20200516-python-001/">Read More</a></p></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://sunyanan12345.github.io"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/sdn/">sdn</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/sdn/" style="font-size: 15px;">sdn</a> <a href="/tags/mininet/" style="font-size: 15px;">mininet</a> <a href="/tags/ryu/" style="font-size: 15px;">ryu</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/05/21/syn20200521-sdwan-005/">mininet 创建topo的两种方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/21/syn20200521-sdwan-004/">Open vSwitch</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/21/syn20200521-sdwan-003/">mininet基本使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/21/syn20200521-sdwan-002/">控制器-ryu</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/20/syn20200520-sdwan-001/">ryu、mininet的基本测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/05/16/syn20200516-python-001/">python的安装配置</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">sunny.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="sunyanan">
+  <meta name="keywords" content="">
+  <title>sunny</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/21/syn20200521-sdwan-005/">mininet 创建topo的两种方式</a>
+
+      <a href="/2020/05/21/syn20200521-sdwan-005/" class="index-excerpt">
+        
+        
+          
+        
+        <div>一、miniedit.py操作界面
+Mininet 2.2.0内置了一个mininet可视化工具miniedit。miniedit在/mininet/examples目录下提供miniedit.py脚本，执行脚本后将显示Mininet的可视化界面，在界面上可进行自定义拓扑和自定义设置。
+
+
+执行miniedit.py脚本，显示操作界面(root 权限执行)
+点击左侧的图标即为选中节点，在面板内点击</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-21
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mininet/">mininet</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/21/syn20200521-sdwan-004/">Open vSwitch</a>
+
+      <a href="/2020/05/21/syn20200521-sdwan-004/" class="index-excerpt">
+        
+        
+          
+        
+        <div>一、Open vSwitchOpenvSwitch简称OVS，正如其官网所述，OVS是一个高质量、多层的虚拟交换软件。它的目的是通过编程扩展支持大规模网络自动化，同时还支持标准的管理接口和协议。
+随着虚拟化应用普及，需要部署更多的虚拟化交换机，而费用昂贵的闭源虚拟交换机让用户不堪重负，多层虚拟化软件交换机Open vSwitch由Nicira Networks开发，主要实现代码为可移植的C代码。它</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-21
+          </div>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/21/syn20200521-sdwan-003/">mininet基本使用</a>
+
+      <a href="/2020/05/21/syn20200521-sdwan-003/" class="index-excerpt">
+        
+        
+          
+        
+        <div>一、二、三来自mininet README.md
+一、What is Mininet?
+Mininet在一台机器上模拟由hosts, links, and switches组成的完整网络。要创建一个简单的双主机、单交换机网络，只需运行:sudo mn 
+
+
+Mininet对于交互式开发、测试和演示非常有用，特别是那些使用OpenFlow和SDN的开发人员。在Mininet中原型化的基于openfl</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-21
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mininet/">mininet</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/21/syn20200521-sdwan-002/">控制器-ryu</a>
+
+      <a href="/2020/05/21/syn20200521-sdwan-002/" class="index-excerpt">
+        
+        
+          
+        
+        <div>一、ryu/ryu目录说明
+
+
+目录
+说明
+
+
+
+app
+内置的应用
+
+
+base
+app_manager.py，其作用是RYU应用的管理中心。用于加载RYU应用程序，接受从APP发送过来的信息，同时也完成消息的路由。
+
+
+cmd
+定义了RYU的命令系统
+
+
+contrib
+主要存放的是开源社区贡献者的代码
+
+
+controller
+controller相关的文件，如events.py, ofp_</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-21
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ryu/">ryu</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/20/syn20200520-sdwan-001/">ryu、mininet的基本测试</a>
+
+      <a href="/2020/05/20/syn20200520-sdwan-001/" class="index-excerpt">
+        
+        
+          
+        
+        <div>
+1.未启动控制层，mininet查看流表，h1 ping h2不通
+2.启动ryu 的应用示例，再用h1 ping h2 ,并显示流表。Ryu的应用下有连接数据，h1 ping 通h2,且流表中有内容。
+3.在2的基础上用h1 ping h2，控制器的应用下没有通信数据，删除流表，再用h1 ping h2,会显示两条流表信息。
+4.启动获取拓扑的api,并从浏览器获取交换机（目前mininet只</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-20
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/sdn/">sdn</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/sdn/">sdn</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/05/16/syn20200516-python-001/">python的安装配置</a>
+
+      <a href="/2020/05/16/syn20200516-python-001/" class="index-excerpt">
+        
+        
+          
+        
+        <div>一、Windows安装python3.8
+python官网下载安装程序,点点点（勾选Add Python to path）。
+查看到版本，安装成功C:\Users\sunyanan&gt;python -V
+Python 3.8.3
+
+C:\Users\sunyanan&gt;
+
+
+
+二、虚拟环境配置
+依次安装virtualenv、virtualenvwrapper-win（linux 下是vir</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-16
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/python/">python</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/python/">python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "An elegant Material-Design theme for Hexo&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
